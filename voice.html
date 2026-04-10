@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Notes | AD's Adventure Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">🌟 AD's World</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="journal.html">Journal</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="voice.html" class="active">Voice Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="page-title">
+      <span class="eyebrow">Voice Journaling</span>
+      <h1>Record quick memories, thoughts, and fun updates.</h1>
+      <p class="helper">Your browser may ask for microphone permission.</p>
+    </section>
+
+    <section class="card form-card">
+      <h2>New Voice Note</h2>
+      <label for="voiceTitle">Title</label>
+      <input id="voiceTitle" type="text" placeholder="What I learned today" />
+
+      <div class="action-row">
+        <button class="btn btn-primary" id="startRecordingBtn">Start Recording</button>
+        <button class="btn btn-secondary" id="stopRecordingBtn" disabled>Stop Recording</button>
+        <button class="btn btn-secondary" id="clearVoiceBtn">Clear All Voice Notes</button>
+      </div>
+
+      <div id="recordingStatus" class="recording-status">Not recording</div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Saved Voice Notes</h2>
+        <span class="pill" id="voiceCount">0 notes</span>
+      </div>
+      <div id="voiceList" class="stack-list empty-state">
+        <p>No voice notes yet. Record one above.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

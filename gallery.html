@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | AD's Adventure Journal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">🌟 AD's World</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="journal.html">Journal</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="voice.html">Voice Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <section class="page-title">
+      <span class="eyebrow">Photo Gallery</span>
+      <h1>Save sports moments, school memories, and favorite snapshots.</h1>
+    </section>
+
+    <section class="card form-card">
+      <h2>Add Photo</h2>
+      <label for="photoCaption">Caption</label>
+      <input id="photoCaption" type="text" placeholder="Soccer practice at the park" />
+
+      <label for="photoInput">Choose Image</label>
+      <input id="photoInput" type="file" accept="image/*" />
+
+      <p class="helper">Tip: smaller images work best for local browser storage.</p>
+
+      <div class="action-row">
+        <button class="btn btn-primary" id="savePhotoBtn">Save Photo</button>
+        <button class="btn btn-secondary" id="clearGalleryBtn">Clear Gallery</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>Gallery</h2>
+        <span class="pill" id="galleryCount">0 photos</span>
+      </div>
+      <div id="galleryGrid" class="gallery-grid empty-state">
+        <p>No photos yet. Add one above.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
